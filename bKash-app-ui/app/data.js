@@ -2,7 +2,7 @@ const transaction = [
   {
     id: "TRXm80p8qmu V5ZC91",
     trxType: "Cash In",
-    amount: "6000",
+    amount: 6000,
     userName: "Rakib",
     phone: "0181830104",
     photo:
@@ -15,7 +15,7 @@ const transaction = [
   {
     id: "TRXm80p89ld XD64B8",
     trxType: "Send Money",
-    amount: "1200",
+    amount: 1200,
     userName: "Taslima mim",
     phone: "01326166538",
     photo:
@@ -28,7 +28,7 @@ const transaction = [
   {
     id: "TRXm80pagzb GEFNH4",
     trxType: "Mobile Research",
-    amount: "450",
+    amount: 450,
     userName: "Rakib khan",
     phone: "01326166758",
     photo:
@@ -40,4 +40,4 @@ const transaction = [
   },
 ];
 
-console.log(Date.now());
+// console.log(Date.now());

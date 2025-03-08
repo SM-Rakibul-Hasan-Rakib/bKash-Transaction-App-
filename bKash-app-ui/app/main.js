@@ -34,5 +34,6 @@ transaction.reverse().forEach((item, index) => {
 
 transaction_list.innerHTML = transactionUI;
 console.log(trxID());
+console.log(Date.now());
 console.log("Cash In", cashIn);
 console.log("Cash Out", cashOut);
