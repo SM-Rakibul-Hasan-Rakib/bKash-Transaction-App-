@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: poppins;
+  box-sizing: border-box; /* Important for responsive sizing */
 }
 
 input:focus {
@@ -13,25 +14,28 @@ body {
   min-height: 100vh;
 }
 
+/* Payment Button */
 .payment-button {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px; /* Adjust for smaller screens */
+  right: 20px; /* Adjust for smaller screens */
   background-color: #e1136e;
   color: #fff;
-  width: 20px;
-  height: 20px;
-  padding: 20px;
-  line-height: 20px;
+  width: 40px; /* Increase size for touch */
+  height: 40px; /* Increase size for touch */
+  padding: 15px; /* Adjust padding */
+  line-height: 40px; /* Adjust line-height */
   border: none;
   box-sizing: content-box;
   border-radius: 50%;
+  text-align: center; /* Center the content */
 }
 
+/* Main Wrapper */
 .main-wrap {
-  width: 400px;
-  height: 400px;
-  margin: 50px auto 0px;
+  width: 90%; /* Use percentage for responsiveness */
+  max-width: 400px; /* Set a maximum width */
+  margin: 20px auto; /* Adjust top margin for smaller screens */
   border-radius: 10px;
 }
 
@@ -40,31 +44,32 @@ body {
 }
 
 .main-wrap .brand img {
-  width: 100px;
+  width: 80px; /* Slightly smaller for mobile */
 }
 
 .main-wrap .brand h3 {
-  font-size: 20px;
+  font-size: 18px; /* Adjust font size */
 }
 
+/* User Section */
 .user {
   display: flex;
-  gap: 15px;
+  gap: 10px; /* Slightly smaller gap */
   background-color: #e1136e;
-  padding: 15px 10px;
+  padding: 10px; /* Reduce padding */
   border-radius: 10px 10px 0px 0px;
   align-items: center;
 }
 
 .user img {
-  width: 70px;
-  height: 70px;
+  width: 50px; /* Smaller image */
+  height: 50px; /* Smaller image */
   object-fit: cover;
   border-radius: 50%;
 }
 
 .user .info h4 {
-  font-size: 18px;
+  font-size: 16px; /* Adjust font size */
   color: #fff;
 }
 
@@ -74,20 +79,24 @@ body {
   border-radius: 30px;
 }
 
+/* Transaction Area */
 .transaction-area {
-  height: 600px;
   background-color: #fff;
   border-radius: 0px 0px 10px 10px;
-  padding: 15px;
+  padding: 10px; /* Reduce padding */
+  height: auto; /* Let the height adjust to content */
 }
 
+/* Search */
 .transaction-area .search {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stack on smaller screens */
+  gap: 10px; /* Add gap between elements */
 }
+
 .search-trans {
   position: relative;
-  width: 300px;
+  width: 100%; /* Full width on mobile */
 }
 
 .search .search-trans button {
@@ -111,29 +120,32 @@ body {
   border: 1px solid #dee1e5;
   padding: 7px 20px;
   border-radius: 5px;
+  width: 100%; /* Full width on mobile */
 }
 
+/* Transaction List */
 .transaction-list {
   overflow: auto;
-  height: 500px;
-  margin-top: 20px;
+  max-height: 400px; /* Limit height, adjust as needed */
+  margin-top: 10px; /* Reduce margin */
 }
 
 .transaction-list::-webkit-scrollbar {
-  width: 10px; /* Width of the vertical scrollbar */
-  height: 10px; /* Height of the horizontal scrollbar */
+  width: 5px; /* Smaller scrollbar */
+  height: 5px; /* Smaller scrollbar */
 }
 
 .transaction-list::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Light gray background */
+  background: #f1f1f1;
   border-radius: 5px;
 }
 
 .transaction-list::-webkit-scrollbar-thumb {
-  background: #e1136e; /* Dark gray color */
+  background: #e1136e;
   border-radius: 5px;
 }
 
+/* Transaction Item */
 .transaction-item {
   display: flex;
   padding: 10px 0px;
@@ -149,15 +161,15 @@ body {
 }
 
 .transaction-item .trans-info img {
-  width: 50px;
-  height: 50px;
+  width: 40px; /* Smaller image */
+  height: 40px; /* Smaller image */
   border-radius: 50%;
   object-fit: cover;
 }
 
 .transaction-item .trans-info span {
   display: block;
-  font-size: 13px;
+  font-size: 12px; /* Adjust font size */
 }
 
 .transaction-item .trans-info span.trans-id {
@@ -171,7 +183,7 @@ body {
 
 .transaction-item .trans-data span {
   display: block;
-  font-size: 13px;
+  font-size: 12px; /* Adjust font size */
 }
 
 .transaction-item .trans-data span.trans-amount {
@@ -181,4 +193,25 @@ body {
 
 .transaction-item .trans-data span.trans-amount.trans-out {
   color: red;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 480px) {
+  .payment-button {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    line-height: 30px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .user .info h4 {
+    font-size: 14px;
+  }
+
+  .user img {
+    width: 40px;
+    height: 40px;
+  }
 }
