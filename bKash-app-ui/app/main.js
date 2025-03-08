@@ -2,7 +2,14 @@ const transaction_list = document.getElementById("transaction_list");
 
 // load all transaction
 let transactionUI = "";
+let cashIn = 0;
+let cashOut = 0;
 transaction.reverse().forEach((item, index) => {
+  if (item.trxType === "Cash In") {
+    cashIn += item.amount;
+  } else {
+    cashOut += item.amount;
+  }
   transactionUI += `<div class="transaction-item">
             <div class="trans-info">
               <img
@@ -20,9 +27,12 @@ transaction.reverse().forEach((item, index) => {
               <span class="trans-amount ${
                 item.trxType === "Cash In" ? "" : "trans-out"
               }">${item.trxType === "Cash In" ? "+" : "-"} ${item.amount}</span>
-              <span class="trans-date">01:04 8/8/24</span>
+              <span class="trans-date">${teansactionTime(item.createAt)}</span>
             </div>
           </div>`;
 });
 
 transaction_list.innerHTML = transactionUI;
+console.log(trxID());
+console.log("Cash In", cashIn);
+console.log("Cash Out", cashOut);
