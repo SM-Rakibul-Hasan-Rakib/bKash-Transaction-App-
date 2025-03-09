@@ -1,4 +1,5 @@
 const transaction_list = document.getElementById("transaction_list");
+const main_balance = document.getElementById("main_balance");
 
 // load all transaction
 let transactionUI = "";
@@ -33,7 +34,8 @@ transaction.reverse().forEach((item, index) => {
 });
 
 transaction_list.innerHTML = transactionUI;
+main_balance.innerHTML = `${cashIn - cashOut} BDT`;
 console.log(trxID());
 console.log(Date.now());
-console.log("Cash In", cashIn);
-console.log("Cash Out", cashOut);
+// console.log("Cash In", cashIn);
+// console.log("Cash Out", cashOut);
