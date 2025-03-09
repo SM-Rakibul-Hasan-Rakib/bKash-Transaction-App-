@@ -5,17 +5,20 @@ const create_transaction_form = document.getElementById(
 );
 
 // load all transaction
-// let userUI = "";
-let transactionUI = "";
-let cashIn = 0;
-let cashOut = 0;
-transaction.reverse().forEach((item, index) => {
-  if (item.trxType === "Cash In") {
-    cashIn += item.amount;
-  } else {
-    cashOut += item.amount;
-  }
-  transactionUI += `<div class="transaction-item">
+const loadTransaction = () => {
+  let transactionUI = "";
+  let cashIn = 0;
+  let cashOut = 0;
+
+  const data = JSON.parse(localStorage.getItem("transaction")) ?? [];
+
+  data.reverse().forEach((item, index) => {
+    if (item.trxType === "Cash In") {
+      cashIn += item.amount;
+    } else {
+      cashOut += item.amount;
+    }
+    transactionUI += `<div class="transaction-item">
             <div class="trans-info">
               <img
                 src="${item.photo}"
@@ -35,35 +38,38 @@ transaction.reverse().forEach((item, index) => {
               <span class="trans-date">${teansactionTime(item.createAt)}</span>
             </div>
           </div>`;
-});
+  });
 
-// user.reverse().forEach((item, index) => {
-//   userUI += `<div class="user">
-//         <img
-//           src="${item.photo}"
-//           alt=""
-//         />
-//         <div class="info">
-//           <h4>${item.name}</h4>
-//           <div id="main_balance" class="balance">12000 BDT</div>
-//         </div>
-//       </div>`;
-// });
+  transaction_list.innerHTML = transactionUI;
+  main_balance.innerHTML = `${cashIn - cashOut} BDT`;
+};
 
-transaction_list.innerHTML = transactionUI;
-main_balance.innerHTML = `${cashIn - cashOut} BDT`;
-// console.log(trxID());
-// console.log(Date.now());
-// console.log("Cash In", cashIn);
-// console.log("Cash Out", cashOut);
-
-// create ner transaction
-// create_transaction_form.onSubmit = (e) => {
-//   e.preventDefault();
-
-//   const form_data = new FormData(e.target);
-// };
-
-create_transaction_form.addEventListener("submit", function (event) {
+loadTransaction();
+// create new transaction
+create_transaction_form.onsubmit = (event) => {
   event.preventDefault();
-});
+
+  const form_data = new FormData(event.target);
+  const data = Object.fromEntries(form_data);
+
+  // clear is data
+  const oldData = JSON.parse(localStorage.getItem("transaction")) ?? [];
+
+  oldData.push({
+    id: trxID(),
+    trxType: data.type,
+    amount: +data.amount,
+    userName: data.name,
+    phone: data.phone,
+    photo: data.photo,
+    status: "true",
+    trash: "false",
+    createAt: Date.now(), // Corrected timestamp
+    updateAt: "",
+  });
+
+  localStorage.setItem("transaction", JSON.stringify(oldData));
+
+  event.target.reset();
+  loadTransaction();
+};
