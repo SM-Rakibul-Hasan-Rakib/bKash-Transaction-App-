@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="/bKash-app-ui/assets/style.css" />
   </head>
   <body>
-    <button class="payment-button"><i class="fa fa-plus"></i></button>
+    <button
+      data-bs-toggle="modal"
+      data-bs-target="#create_trx_modal"
+      class="payment-button"
+    >
+      <i class="fa fa-plus"></i>
+    </button>
 
     <div class="main-wrap">
       <div class="brand">
@@ -68,129 +74,53 @@
               <span class="trans-date">01:04 8/8/24</span>
             </div>
           </div>
-          <!-- <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount">+ 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div>
-          <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount trans-out">- 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div>
-          <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount">+ 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div>
-          <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount">+ 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div>
-          <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount">+ 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div>
-          <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount">+ 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div>
-          <div class="transaction-item">
-            <div class="trans-info">
-              <img
-                src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-1/333936078_1361956414655948_834213367116914942_n.jpg?stp=c4.48.545.546a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=AYcCqHOm9YkQ7kNvgFZgcB5&_nc_zt=24&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AoU6hBZ2RW_cybF33GF1VPN&oh=00_AYB2AD67hwpaL1s7RZc2INydLgCbG130HIZ7nURDaxZmHw&oe=67AF84D7"
-                alt=""
-              />
-              <div class="details">
-                <span class="trans-type">Send Money</span>
-                <span class="trans-user">Ashraful Haque</span>
-                <span class="trans-id">TrxID : iashdfiasdfa</span>
-              </div>
-            </div>
-            <div class="trans-data">
-              <span class="trans-amount">+ 60000 BDT</span>
-              <span class="trans-date">01:04 8/8/24</span>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
 
+    <div class="modal fade" id="create_trx_modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2>Create a Transaction</h2>
+            <hr />
+            <form action="">
+              <div class="my-3">
+                <label for=""> phone </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="my-3">
+                <label for=""> Amount </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="my-3">
+                <label class="mb-2" for=""> Type </label>
+                <select class="form-control" name="" id="">
+                  <option value="Cash In">Cash In</option>
+                  <option value="Cash Out">Cash Out</option>
+                  <option value="Send Money">Send Money</option>
+                  <option value="Make Payment">Make Payment</option>
+                  <option value="Mobile Research">Mobile Research</option>
+                </select>
+              </div>
+              <div class="my-3">
+                <label for=""> Name </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="my-3">
+                <label for=""> Photo </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="my-3">
+                <button type="submit" class="btn btn-success">
+                  Create new transaction
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/bKash-app-ui/app/data.js"></script>
     <script src="/bKash-app-ui/app/funcation.js"></script>

@@ -2,6 +2,7 @@ const transaction_list = document.getElementById("transaction_list");
 const main_balance = document.getElementById("main_balance");
 
 // load all transaction
+// let userUI = "";
 let transactionUI = "";
 let cashIn = 0;
 let cashOut = 0;
@@ -32,6 +33,19 @@ transaction.reverse().forEach((item, index) => {
             </div>
           </div>`;
 });
+
+// user.reverse().forEach((item, index) => {
+//   userUI += `<div class="user">
+//         <img
+//           src="${item.photo}"
+//           alt=""
+//         />
+//         <div class="info">
+//           <h4>${item.name}</h4>
+//           <div id="main_balance" class="balance">12000 BDT</div>
+//         </div>
+//       </div>`;
+// });
 
 transaction_list.innerHTML = transactionUI;
 main_balance.innerHTML = `${cashIn - cashOut} BDT`;
