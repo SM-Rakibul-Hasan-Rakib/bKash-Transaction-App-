@@ -1,5 +1,8 @@
 const transaction_list = document.getElementById("transaction_list");
 const main_balance = document.getElementById("main_balance");
+const create_transaction_form = document.getElementById(
+  "create_transaction_form"
+);
 
 // load all transaction
 // let userUI = "";
@@ -49,7 +52,18 @@ transaction.reverse().forEach((item, index) => {
 
 transaction_list.innerHTML = transactionUI;
 main_balance.innerHTML = `${cashIn - cashOut} BDT`;
-console.log(trxID());
-console.log(Date.now());
+// console.log(trxID());
+// console.log(Date.now());
 // console.log("Cash In", cashIn);
 // console.log("Cash Out", cashOut);
+
+// create ner transaction
+// create_transaction_form.onSubmit = (e) => {
+//   e.preventDefault();
+
+//   const form_data = new FormData(e.target);
+// };
+
+create_transaction_form.addEventListener("submit", function (event) {
+  event.preventDefault();
+});

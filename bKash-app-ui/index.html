@@ -84,18 +84,18 @@
           <div class="modal-body">
             <h2>Create a Transaction</h2>
             <hr />
-            <form action="">
+            <form id="create_transaction_form">
               <div class="my-3">
                 <label for=""> phone </label>
-                <input type="text" class="form-control" />
+                <input type="text" name="phone" class="form-control" />
               </div>
               <div class="my-3">
                 <label for=""> Amount </label>
-                <input type="text" class="form-control" />
+                <input type="text" name="amount" class="form-control" />
               </div>
               <div class="my-3">
                 <label class="mb-2" for=""> Type </label>
-                <select class="form-control" name="" id="">
+                <select class="form-control" name="type" id="">
                   <option value="Cash In">Cash In</option>
                   <option value="Cash Out">Cash Out</option>
                   <option value="Send Money">Send Money</option>
@@ -105,11 +105,11 @@
               </div>
               <div class="my-3">
                 <label for=""> Name </label>
-                <input type="text" class="form-control" />
+                <input type="text" name="name" class="form-control" />
               </div>
               <div class="my-3">
                 <label for=""> Photo </label>
-                <input type="text" class="form-control" />
+                <input type="text" name="photo" class="form-control" />
               </div>
               <div class="my-3">
                 <button type="submit" class="btn btn-success">
