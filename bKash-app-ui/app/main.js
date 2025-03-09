@@ -3,6 +3,7 @@ const main_balance = document.getElementById("main_balance");
 const create_transaction_form = document.getElementById(
   "create_transaction_form"
 );
+const btn_close = document.querySelector(".btn-close");
 
 // load all transaction
 const loadTransaction = () => {
@@ -69,7 +70,7 @@ create_transaction_form.onsubmit = (event) => {
   });
 
   localStorage.setItem("transaction", JSON.stringify(oldData));
-
-  event.target.reset();
   loadTransaction();
+  btn_close.click();
+  event.target.reset();
 };
